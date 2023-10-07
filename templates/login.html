@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <style>
+       I*{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+        }
+       body{
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+       }
+       .container{
+            display: flex;
+            flex-direction: column;
+            width: 300px;
+            padding: 15px;
+            border: 1px solid skyblue;
+            border-radius: 5px;
+       }
+       input{
+            margin: 5px 0px;
+            height: 35px;
+            padding: 7px;
+       }
+       button{
+            height: 35px;
+            margin: 5px 0px;
+            background-color: skyblue;
+            border: none;
+            border-radius: 5px;
+            color: #333;
+       }
+       button:hover{
+            background-color: #333;
+            color: skyblue;
+       }
+   </style>
+</head>
+<body>
+<form action="login" method="post">
+    {% csrf_token %}
+    <div class="container">
+    <input type="text" name="username" placeholder="Enter your UserName"><br>
+    <input type="password" name="password" placeholder="Enter your password"><br>
+    <button>Login</button>
+    </div>
+</form>
+</body>
+</html>
